@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #ifndef GOLD_H
 #define GOLD_H
 
@@ -5,9 +14,9 @@
 
 class Gold : public Event {
     private:
-
+        bool isGold;
     public:
-        Gold(const int &x, const int &y) : Event(x, y) {};
+        Gold() : Event() {isGold = true;};
 
         virtual void percept();
         virtual void encounter(Adventurer &a);

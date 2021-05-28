@@ -1,8 +1,15 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #include "event.h"
 
-Event::Event(const int &x, const int &y) {
-    posX = x;
-    posY = y;
+Event::Event() {
 }
 
 void Event::percept() {
@@ -13,10 +20,6 @@ void Event::encounter(Adventurer &a) {
 }
 
 bool Event::isNull() const {
+    //cout << "null\n";
     return true;
-}
-
-void Event::getPos(int &x, int &y) {
-    x = posX;
-    y = posY;
 }

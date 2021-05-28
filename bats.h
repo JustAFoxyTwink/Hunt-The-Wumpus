@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #ifndef BATS_H
 #define BATS_H
 
@@ -7,7 +16,7 @@ class Bats : public Event {
     private:
 
     public:
-        Bats(const int &x, const int &y) : Event(x, y) {};
+        Bats() : Event() {};
 
         virtual void percept();
         virtual void encounter(Adventurer &a);

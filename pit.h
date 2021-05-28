@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #ifndef PIT_H
 #define PIT_H
 
@@ -7,7 +16,7 @@ class Pit : public Event {
     private:
 
     public:
-        Pit(const int &x, const int &y) : Event(x, y) {};
+        Pit() : Event() {};
 
         virtual void percept();
         virtual void encounter(Adventurer &a);

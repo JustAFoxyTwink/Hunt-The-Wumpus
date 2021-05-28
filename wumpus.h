@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #ifndef WUMPUS_H
 #define WUMPUS_H
 
@@ -5,15 +14,17 @@
 
 class Wumpus : public Event {
     private:
-
+        bool isAlive;
     public:
-        Wumpus(const int &x, const int &y) : Event(x, y) {};
+        Wumpus() : Event() {isAlive = true;};
 
         virtual void percept();
         virtual void encounter(Adventurer &a);
         virtual bool isNull() const;
 
-        void wakeUp(Adventurer &a);
+        bool wakeUp();
+        void kill();
+        bool alive();
 };
 
 #endif

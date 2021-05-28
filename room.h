@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #ifndef ROOM_H
 #define ROOM_H
 
@@ -9,8 +18,7 @@ class Room {
         int posX, posY;
     public:
         Room(const int &x, const int &y);
-        Room(const int &x, const int &y, Event e);
-        Room& operator=(const Room &source);
+        Room(const int &x, const int &y, Event *e);
         ~Room();
 
         Event* getEvent() const;

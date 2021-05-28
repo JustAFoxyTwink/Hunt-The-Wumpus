@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #ifndef ESCAPE_H
 #define ESCAPE_H
 
@@ -7,7 +16,7 @@ class Escape : public Event {
     private:
 
     public:
-        Escape(const int &x, const int &y) : Event(x, y) {};
+        Escape() : Event() {};
 
         virtual void percept();
         virtual void encounter(Adventurer &a);

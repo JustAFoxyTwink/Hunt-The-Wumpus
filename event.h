@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #ifndef EVENT_H
 #define EVENT_H
 
@@ -10,9 +19,8 @@ using namespace std;
 
 class Event {
     private:
-        int posX, posY;
     public:
-        Event(const int &x, const int &y);
+        Event();
 
         virtual void percept();
         virtual void encounter(Adventurer &a);

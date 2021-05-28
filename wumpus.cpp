@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename:
+** Author:
+** Date:
+** Description:
+** Input:
+** Output:
+*********************************************************************/
+
 #include "wumpus.h"
 
 void Wumpus::percept() {
@@ -6,22 +15,39 @@ void Wumpus::percept() {
 
 void Wumpus::encounter(Adventurer &a) {
     cout << "You entered the room with the Wumpus in it!\n";
-    wakeUp(a);
-}
-
-bool Wumpus::isNull() const {
-    return false;
-}
-
-void Wumpus::wakeUp(Adventurer &a) {
-    cout << "The Wumpus wakes up!\n";
-
-    int x1, x2, y1, y2;
-    a.getPos(x1, y1);
-    getPos(x2, y2);
-
-    if (x1 == x2 && y1 == y2) {
+    if (this->alive()) {
         cout << "The Wumpus gobbles you up angrily!\n";
         a.kill();
     }
+    else
+        cout << "The Wumpus is dead!\n";
+}
+
+bool Wumpus::isNull() const {
+    //cout << "not null\n";
+    return false;
+}
+
+bool Wumpus::wakeUp() {
+    cout << "The Wumpus wakes up!\n";
+
+    int randInt = rand() % 4;
+
+    if (randInt == 0) {
+        cout << "The Wumpus goes back to sleep without moving.\n";
+        return false;
+    }
+    else {
+        cout << "The Wumpus moves to a random empty room, then goes back to sleep.\n";
+        return true;
+    }
+}
+
+void Wumpus::kill() {
+    isAlive = false;
+    cout << "You killed the Wumpus!\n";
+}
+
+bool Wumpus::alive() {
+    return isAlive;
 }
